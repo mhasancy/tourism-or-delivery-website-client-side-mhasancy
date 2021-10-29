@@ -20,7 +20,7 @@ const Review = () => {
   );
   const onSubmit = (data) => {
     axios
-      ?.post("http://localhost:5000/orders", {
+      ?.post("https://morning-headland-33289.herokuapp.com/orders", {
         ...data,
         serviceTitle: matchedService?.title,
         serviceId: [serviceId],

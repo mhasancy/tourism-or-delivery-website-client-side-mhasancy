@@ -5,7 +5,7 @@ import useAuth from "../../../hooks/useAuth";
 
 //private route
 const PrivateRoute = ({ children, ...rest }) => {
-  const { firebaseContext, services } = useAuth();
+  const { firebaseContext } = useAuth();
 
   //destructuring
   const { user, isLoading } = firebaseContext;

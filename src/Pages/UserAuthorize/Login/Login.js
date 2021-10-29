@@ -6,7 +6,7 @@ import useAuth from "../../../hooks/useAuth";
 //log in component
 const Login = () => {
   //auth context
-  const { firebaseContext, services } = useAuth();
+  const { firebaseContext } = useAuth();
   //destructuring
   const { googleSignIn } = firebaseContext;
   //location redirectUrl
