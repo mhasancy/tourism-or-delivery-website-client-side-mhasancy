@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+/* gradient background */
+.gradient-bg {
+  background: rgb(0, 206, 255);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 206, 255, 0.5494572829131652) 0%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  border: none;
+}
+/* gradient button */
+.gradient-btn {
+  background: rgb(0, 206, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 206, 255, 0.5494572829131652) 0%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  border: none;
+}
+/* gradient text */
+.gradient-txt {
+  color: rgb(0, 206, 255);
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(0, 206, 255, 0.5494572829131652) 0%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* border radius */
+.radius-card {
+  border-radius: 15px;
+}
+/*card border */
+.border-card {
+  border: 1px solid rgba(128, 128, 128, 0.123);
+}
+/* card hover */
+#hover-card:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: opacity 0.3s ease-in-out;
+}
+/* --------------------
+          header
+----------------------- */
+/* banner background */
+.hero-bg {
+  background: url("https://i.ibb.co/rsbNrWy/slider-img01.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+}
+/*banner header text  */
+.hero-bg h1 {
+  font-size: 65px;
+}
+/* -------------------
+        footer        
+--------------------- */
+/* footer background */
+.footer-bg {
+  background: url("https://i.ibb.co/0ZCphDK/footer-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+}
