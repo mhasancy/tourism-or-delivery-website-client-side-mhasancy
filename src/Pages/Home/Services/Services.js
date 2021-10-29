@@ -1,20 +1,14 @@
 //imported file
-import React, { useEffect, useState } from "react";
+import React from "react";
+import useAuth from "../../../hooks/useAuth";
 import Service from "../Service/Service";
 
 //services component
 const Services = () => {
   //services data set
-  const [servicesData, setServicesData] = useState([]);
+  const { dataContext } = useAuth();
+  const { servicesData } = dataContext;
 
-  //services data load hook
-  useEffect(() => {
-    fetch(
-      "https://raw.githubusercontent.com/mhasancy/test/main/serviceData.json"
-    )
-      .then((res) => res.json())
-      .then((data) => setServicesData(data));
-  }, []);
   return (
     <div className=" container mx-auto my-5">
       <h1 className="fw-bold text-center ms-md-4 p-md-2  my-5">
@@ -23,7 +17,7 @@ const Services = () => {
       </h1>
       <div className="row row-cols-1 row-cols-md-3 g-4 container mx-auto">
         {servicesData?.map((serviceData) => (
-          <Service key={serviceData.id} serviceData={serviceData}></Service>
+          <Service key={serviceData?._id} serviceData={serviceData}></Service>
         ))}
       </div>
     </div>

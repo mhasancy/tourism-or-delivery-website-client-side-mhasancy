@@ -2,15 +2,22 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 const useDataContext = () => {
-  const [services, setServices] = useState();
+  const [servicesData, setServicesData] = useState();
+  const [ordersData, setOrdersData] = useState();
+  //service data load
   useEffect(() => {
     axios
-      .get("https://morning-headland-33289.herokuapp.com/services")
-      .then((response) => setServices(response.data));
+      .get("http://localhost:5000/services")
+      .then((response) => setServicesData(response?.data));
   }, []);
-  return {
-    services,
-  };
+
+  //individual orders data load
+  useEffect(() => {
+    axios
+      .get("http://localhost:5000/orders")
+      .then((response) => setOrdersData(response?.data));
+  }, []);
+  return { servicesData, ordersData };
 };
 
 export default useDataContext;

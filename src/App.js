@@ -3,11 +3,11 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import AuthProvider from "./contexts/AuthProvider";
 import AddingServices from "./Pages/AddingServices/AddingServices";
-import Booking from "./Pages/Booking/Booking";
 import Home from "./Pages/Home/Home/Home";
 import ManageOrders from "./Pages/ManageOrders/ManageOrders";
 import MyOrders from "./Pages/MyOrders/MyOrders";
 import NotFound from "./Pages/NotFound/NotFound";
+import Review from "./Pages/Review/Review";
 import Footer from "./Pages/Shared/Footer/Footer";
 import Navbar from "./Pages/Shared/Navbar/Navbar";
 import Login from "./Pages/UserAuthorize/Login/Login";
@@ -26,8 +26,8 @@ function App() {
             <Route exact path="/home">
               <Home></Home>
             </Route>
-            <PrivateRoute exact path="/booking/:serviceId">
-              <Booking></Booking>
+            <PrivateRoute exact path="/review/:serviceId">
+              <Review></Review>
             </PrivateRoute>
             <PrivateRoute exact path="/my-orders">
               <MyOrders></MyOrders>
