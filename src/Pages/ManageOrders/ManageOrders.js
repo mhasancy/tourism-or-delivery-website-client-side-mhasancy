@@ -7,6 +7,7 @@ const ManageOrders = () => {
   const { ordersData } = dataContext;
   return (
     <div>
+      <h2>{ordersData?.length}</h2>
       {ordersData?.map((orderData) => (
         <Orders orderData={orderData} key={orderData._id} />
       ))}

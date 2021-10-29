@@ -1,6 +1,6 @@
 //imported file
 import axios from "axios";
-import React, { useState } from "react";
+import React from "react";
 import { useForm } from "react-hook-form";
 import { useParams } from "react-router";
 import { Link } from "react-router-dom";
@@ -14,7 +14,6 @@ const Review = () => {
   const { dataContext, firebaseContext } = useAuth();
   const { user } = firebaseContext;
   const { servicesData } = dataContext;
-  const [orders, setOrders] = useState({});
   const { register, handleSubmit, reset } = useForm();
   const matchedService = servicesData?.find(
     (serviceData) => serviceData?._id === serviceId
@@ -25,7 +24,7 @@ const Review = () => {
         ...data,
         serviceTitle: matchedService?.title,
         serviceId: [serviceId],
-        status: "pending",
+        status: "Pending",
       })
       .then((response) => {
         if (response?.data.acknowledged) {
@@ -37,7 +36,6 @@ const Review = () => {
       });
   };
   //dynamic route data load hook
-  console.log(orders);
   //adding matchedService data
 
   return (

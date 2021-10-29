@@ -10,9 +10,9 @@ const MyOrders = () => {
   const myOrderedItems = ordersData?.filter(
     (myOrderedItem) => myOrderedItem.email === user.email
   );
-  console.log(myOrderedItems);
   return (
     <div>
+      <h2>{myOrderedItems?.length}</h2>
       {myOrderedItems?.map((myOrderedItem) => (
         <MyOrder
           myOrderedItem={myOrderedItem}

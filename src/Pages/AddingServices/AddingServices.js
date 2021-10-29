@@ -1,21 +1,15 @@
-import axios from "axios";
-import React, { useState } from "react";
+import React from "react";
 import { useForm } from "react-hook-form";
+import useAuth from "../../hooks/useAuth";
 
 const AddingServices = () => {
-  const [addedService, setAddedService] = useState({});
-  const { register, handleSubmit, reset } = useForm();
-  const onSubmit = (data) => {
-    axios.post("http://localhost:5000/services", data).then((response) => {
-      setAddedService(response?.data);
-    });
-    alert("data added");
-    reset();
-  };
+  const { dataContext } = useAuth();
+  const { handleAddedService, addedService } = dataContext;
+  const { register, handleSubmit } = useForm();
 
   return (
     <div>
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form onSubmit={handleSubmit(handleAddedService)}>
         <input type="text" {...register("title")} /> <br />
         <input type="text" {...register("imgUrl")} /> <br />
         <textarea {...register("intro")} /> <br />
