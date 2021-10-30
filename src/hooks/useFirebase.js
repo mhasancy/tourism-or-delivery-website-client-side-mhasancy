@@ -50,10 +50,6 @@ const useFirebase = () => {
     return () => unsubscribed;
   }, [auth]);
 
-  //set error handle empty
-  const errorDataClear = () => {
-    setError("");
-  };
   return {
     isLoading,
     user,
@@ -63,7 +59,6 @@ const useFirebase = () => {
     setError,
     googleSignIn,
     logOut,
-    errorDataClear,
   };
 };
 export default useFirebase;

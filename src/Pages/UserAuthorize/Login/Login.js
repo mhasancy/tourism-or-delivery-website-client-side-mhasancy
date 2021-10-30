@@ -21,19 +21,31 @@ const Login = () => {
   };
 
   return (
-    <div className="row row-cols-1 h-100 row-cols-md-2 p-0 shadow gradient-bg bg-primary container mx-auto my-5 radius-card overflow-hidden">
-      <div className="col col-md-7 container bg-white py-4">
-        <h2 className="fw-bold text-center ms-md-4 p-md-2 mx-auto my-5">
-          Please
-          <span className="gradient-txt"> Login</span>
-        </h2>
+    <div className="row row-cols-1  h-100 row-cols-md-2 p-0 shadow container mx-auto my-5 radius-card overflow-hidden">
+      <div
+        style={{
+          background: `url("https://wanderers.qodeinteractive.com/wp-content/uploads/2018/02/h1-background-1.png?id=125")`,
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          width: "100%",
+          backgroundPosition: "center",
+        }}
+        className="col col-md-7 container bg-white py-4"
+      >
+        <h3 className="fw-bold fs-1 text-center ms-md-4 p-md-2 mx-auto my-5">
+          Login to your account.
+        </h3>
 
-        <button
-          className="rounded-pill btn btn-primary gradient-btn fw-bold"
+        <img
+          style={{ cursor: "pointer" }}
+          className="img-fluid"
           onClick={handleGoogleLogin}
-        >
-          <i className="fab fa-google"></i> Login with Google
-        </button>
+          src="./google-signin.png"
+          alt=""
+        />
+
+        <br />
+        <br />
         <br />
       </div>
     </div>

@@ -1,14 +1,18 @@
 //imported file
 import React from "react";
 import Banner from "../Banner/Banner";
-import Services from "../Services/Services";
+import Blogs from "../Blogs/Blogs";
+import Team from "../Team/Team";
+import TourPlans from "../TourPlans/TourPlans";
 
 //home component
 const Home = () => {
   return (
     <div>
       <Banner></Banner>
-      <Services></Services>
+      <TourPlans></TourPlans>
+      <Blogs></Blogs>
+      <Team></Team>
     </div>
   );
 };

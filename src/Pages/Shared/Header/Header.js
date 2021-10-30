@@ -3,16 +3,16 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import useAuth from "../../../hooks/useAuth";
 //navbar component
-const Navbar = () => {
+const Header = () => {
   const { firebaseContext } = useAuth();
   //destructuring
   const { user, logOut } = firebaseContext;
 
   return (
-    <nav className="sticky-top navbar navbar-expand-lg navbar-light bg-light fw-bold">
+    <nav className="sticky-top navbar navbar-expand-lg shadow navbar-light bg-light fw-bold">
       <div className="container">
         <NavLink className="navbar-brand fs-1 fw-bold gradient-txt" to="/">
-          Floral Care
+          <span style={{ fontFamily: "Kristi" }}>Travel Now</span>
         </NavLink>
         <button
           className="navbar-toggler"
@@ -33,27 +33,29 @@ const Navbar = () => {
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/review/:serviceId">
-                Review
+              <NavLink className="nav-link" to="/review-booking/:serviceId">
+                Review Booking
               </NavLink>
             </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/my-orders">
-                My Orders
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/add-a-service">
-                Add Services
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/manage-all-orders">
-                All Orders
-              </NavLink>
-            </li>
+
             {user?.email ? (
               <>
+                {" "}
+                <li className="nav-item">
+                  <NavLink className="nav-link" to="/my-bookings">
+                    My Bookings
+                  </NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink className="nav-link" to="/adding-tour-plan">
+                    Adding Tour Plan
+                  </NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink className="nav-link" to="/manage-bookings">
+                    Manage All Bookings
+                  </NavLink>
+                </li>
                 <li className="nav-item">
                   <NavLink to="" className="nav-link">
                     {user?.displayName}
@@ -81,4 +83,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Header;

@@ -1,23 +1,11 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useForm } from "react-hook-form";
 const useDataContext = () => {
-  const [servicesData, setServicesData] = useState();
-  const [ordersData, setOrdersData] = useState();
+  const [servicesData, setServicesData] = useState([]);
+  const [teamData, setTeamData] = useState([]);
+  const [blogsData, setBlogsData] = useState([]);
+  const [ordersData, setOrdersData] = useState([]);
   const [orderStatus, setOrderStatus] = useState("Pending");
-  const { reset } = useForm();
-
-  const handleAddedService = (data) => {
-    axios
-      .post("https://morning-headland-33289.herokuapp.com/services", data)
-      .then((response) => {
-        if (response?.data.insertedId) {
-          console.log(response?.data.insertedId);
-          alert("data added");
-          reset();
-        }
-      });
-  };
 
   //delete user order
   const deleteOrder = (_id) => {
@@ -54,6 +42,17 @@ const useDataContext = () => {
       .get("https://morning-headland-33289.herokuapp.com/services")
       .then((response) => setServicesData(response?.data));
   }, [servicesData]);
+  //service data load
+  useEffect(() => {
+    axios
+      .get("https://morning-headland-33289.herokuapp.com/team")
+      .then((response) => setTeamData(response?.data));
+  }, []);
+  useEffect(() => {
+    axios
+      .get("https://morning-headland-33289.herokuapp.com/blogs")
+      .then((response) => setBlogsData(response?.data));
+  }, []);
 
   //individual orders data load
   useEffect(() => {
@@ -65,8 +64,9 @@ const useDataContext = () => {
   return {
     servicesData,
     ordersData,
+    teamData,
+    blogsData,
     deleteOrder,
-    handleAddedService,
     handleStatusUpdate,
     orderStatus,
   };
