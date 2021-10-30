@@ -25,22 +25,22 @@ const TeamMember = ({ teamDataSingle }) => {
             <div className="mb-3 fs-3 gradient-txt">
               <span>
                 <Link to="/">
-                  <i class="fab fa-twitter-square me-2"></i>
+                  <i className="fab fa-twitter-square me-2"></i>
                 </Link>
               </span>
               <span>
                 <Link to="/">
-                  <i class="fab fa-linkedin me-2"></i>
+                  <i className="fab fa-linkedin me-2"></i>
                 </Link>
               </span>
               <span>
                 <Link to="/">
-                  <i class="fab fa-facebook-square me-2"></i>
+                  <i className="fab fa-facebook-square me-2"></i>
                 </Link>
               </span>
               <span>
                 <Link to="/">
-                  <i class="fab fa-instagram-square"></i>
+                  <i className="fab fa-instagram-square"></i>
                 </Link>
               </span>
             </div>

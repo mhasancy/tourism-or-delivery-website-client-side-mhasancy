@@ -53,55 +53,84 @@ const ReviewBooking = () => {
       <p className="text-center w-50 mx-auto ">
         Add new tour plan by providing Name, Email, Number and Address.
       </p>
-      <h2 className="fw-bold fs-2">{matchedService?.title}</h2>
-      <h4 className="fw-light lh-base py-3 px-4 text-start">
-        {matchedService?.intro}
-      </h4>
+
       {matchedService ? (
-        <div className="container mx-auto w-50">
-          <form onSubmit={handleSubmit(onSubmit)}>
-            <div className="mb-3">
-              <p className="text-start">Name</p>
-              <input
-                defaultValue={user?.displayName}
-                {...register("name", { required: true, maxLength: 20 })}
-                type="text"
-                className="form-control"
-              />
-            </div>
+        <>
+          <div className="container w-75">
+            <table className="table table-bordered">
+              <thead>
+                <tr>
+                  <th scope="col-2">Picture</th>
+                  <th className="col-2" scope="col">
+                    Tour Name
+                  </th>
+                  <th scope="col">Details</th>
+                  <th className="col-2" scope="col">
+                    Price
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <img
+                      style={{ width: "100px" }}
+                      src={matchedService?.imgUrl}
+                      alt=""
+                    />
+                  </td>
+                  <td>{matchedService?.title}</td>
+                  <td> {matchedService?.intro}</td>
+                  <td>{matchedService?.price}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div className="container mx-auto w-50">
+            <form onSubmit={handleSubmit(onSubmit)}>
+              <div className="mb-3">
+                <p className="text-start">Name</p>
+                <input
+                  defaultValue={user?.displayName}
+                  {...register("name", { required: true, maxLength: 20 })}
+                  type="text"
+                  className="form-control"
+                />
+              </div>
 
-            <div className="mb-3">
-              <p className="text-start">Email</p>
-              <input
-                defaultValue={user?.email}
-                {...register("email", { required: true })}
-                type="email"
-                className="form-control"
-              />
-            </div>
+              <div className="mb-3">
+                <p className="text-start">Email</p>
+                <input
+                  defaultValue={user?.email}
+                  {...register("email", { required: true })}
+                  type="email"
+                  className="form-control"
+                />
+              </div>
 
-            <div className="mb-3">
-              <p className="text-start">Mobile No:</p>
-              <input
-                {...register("cell", { required: true })}
-                type="telephone"
-                className="form-control"
-              />
-            </div>
-            <div className="mb-3">
-              <p className="text-start">Address</p>
-              <textarea
-                {...register("address", { required: true })}
-                type="text"
-                className="form-control"
-              />
-            </div>
+              <div className="mb-3">
+                <p className="text-start">Mobile No:</p>
+                <input
+                  {...register("cell", { required: true })}
+                  type="telephone"
+                  className="form-control"
+                />
+              </div>
+              <div className="mb-3">
+                <p className="text-start">Address</p>
+                <textarea
+                  {...register("address", { required: true })}
+                  type="text"
+                  className="form-control"
+                />
+              </div>
 
-            <button type="submit" className="btn btn-primary gradient-btn">
-              Place Order
-            </button>
-          </form>
-        </div>
+              <button type="submit" className="btn btn-primary gradient-btn">
+                Place Order
+              </button>
+            </form>
+          </div>
+        </>
       ) : (
         <>
           <h4 className="fw-light pb-3">

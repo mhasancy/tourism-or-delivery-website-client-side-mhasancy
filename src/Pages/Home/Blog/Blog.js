@@ -20,12 +20,12 @@ const Blog = ({ blogData }) => {
           </Link>
           <div className="mb-3">
             <span>
-              <i class="far fa-calendar me-2"></i>
+              <i className="far fa-calendar me-2"></i>
               {""}
               {date}
             </span>
             <span>
-              <i class="far fa-comments ms-4 me-2"></i> {""}
+              <i className="far fa-comments ms-4 me-2"></i> {""}
               {comments}
             </span>
           </div>
