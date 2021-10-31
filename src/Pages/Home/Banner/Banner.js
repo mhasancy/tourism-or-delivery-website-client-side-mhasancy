@@ -6,7 +6,14 @@ const Banner = () => {
   return (
     <div className="mx-auto row img-fluid hero-bg text-start align-items-center container-fluid ps-md-5">
       <div className=" ps-md-5 my-5">
-        <h1 className="col-12 col-md-6 text-white fw-bold">
+        <h1 className="d-none d-md-block col-12 col-md-6 text-white fw-bold">
+          Start Your Journey
+          <span className="gradient-txt"> .</span>
+        </h1>
+        <h1
+          style={{ fontSize: "3rem" }}
+          className="d-block d-md-none col-12 col-md-6 text-white fw-bold"
+        >
           Start Your Journey
           <span className="gradient-txt"> .</span>
         </h1>

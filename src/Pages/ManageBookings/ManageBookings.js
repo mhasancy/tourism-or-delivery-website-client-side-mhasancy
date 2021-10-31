@@ -10,11 +10,18 @@ const ManageBookings = () => {
   const { ordersData } = dataContext;
   return (
     <div className="radius-card container mt-5 pt-1 pb-5 px-5">
-      <h1 className="fw-bold text-center  mt-5 ">
+      <h1 className="fw-bold d-none d-md-block text-center  mt-5 ">
         Manage All Bookings
-        <span className="gradient-txt"> .</span>
+        <span className="gradient-txt">.</span>
       </h1>
-      <p className="text-center w-50 mx-auto ">
+      <h1
+        style={{ fontSize: "2.5rem" }}
+        className="fw-bold d-block d-md-none text-center  mt-5 "
+      >
+        Manage All Bookings
+        <span className="gradient-txt">.</span>
+      </h1>
+      <p className="text-center w-75 mx-auto ">
         Here you can know total booked items,update booking status and also can
         delete a respective booking.
       </p>

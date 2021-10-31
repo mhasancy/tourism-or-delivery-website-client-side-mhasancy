@@ -10,11 +10,19 @@ const TourPlans = () => {
   const { servicesData } = dataContext;
   return (
     <div className=" container mx-auto my-5">
-      <h1 className="fw-bold text-center ms-md-4 p-md-2  mt-5 mb-3">
+      <h1 className="d-none d-md-block fw-bold text-center ms-md-4 p-md-2  mt-5 mb-3">
         Go Exotic Places
         <span className="gradient-txt"> .</span>
       </h1>
-      <p className="text-center w-50 mx-auto mb-5">
+
+      <h1
+        style={{ fontSize: "3rem" }}
+        className="d-block d-md-none fw-bold text-center ms-md-4 p-md-2  mt-5 mb-3"
+      >
+        Go Exotic Places
+        <span className="gradient-txt"> .</span>
+      </h1>
+      <p className="text-center w-75 mx-auto mb-5">
         When it comes to exploring exotic places, the choices are numerous.
         Whether you like peaceful destinations or vibrant landscapes, we have
         offers for you.

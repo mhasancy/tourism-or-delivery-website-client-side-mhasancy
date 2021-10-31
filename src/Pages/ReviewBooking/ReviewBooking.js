@@ -45,11 +45,18 @@ const ReviewBooking = () => {
 
   return (
     <div className="container radius-card mt-5 pt-1 pb-5 px-5">
-      <h1 className="fw-bold text-center  mt-5 ">
+      <h1 className="fw-bold d-none d-md-block text-center  mt-5 ">
         Book Your Tour
         <span className="gradient-txt">.</span>
       </h1>
-      <p className="text-center w-50 mx-auto pb-5">
+      <h1
+        style={{ fontSize: "2.5rem" }}
+        className="fw-bold d-block d-md-none text-center  mt-5 "
+      >
+        Book Your Tour
+        <span className="gradient-txt">.</span>
+      </h1>
+      <p className="text-center w-75 mx-auto pb-5">
         Add new tour plan by providing Name, Email, Number and Address.
       </p>
 
@@ -60,15 +67,30 @@ const ReviewBooking = () => {
               <img
                 style={{ height: "25rem" }}
                 src={matchedService?.imgUrl}
-                className="card-img-top img-fluid"
+                className="card-img-top d-none d-md-block img-fluid"
+                alt=""
+              />
+              <img
+                style={{ height: "15rem" }}
+                src={matchedService?.imgUrl}
+                className="d-block d-md-none card-img-top img-fluid"
                 alt=""
               />
               <div className="card-body">
-                <h4 className="card-title fw-bold">{matchedService?.title}</h4>
+                <h4
+                  style={{ fontSize: "30px" }}
+                  className="d-block d-md-none card-title fw-bold"
+                >
+                  {matchedService?.title}
+                </h4>
+                <h4 className="d-none d-md-block card-title fw-bold">
+                  {matchedService?.title}
+                </h4>
                 <p className="card-text fs-5 fw-light px-4">
                   {matchedService?.intro}.
                 </p>
-                <p className="card-text fs-5">
+
+                <p className="d-none d-md-block card-text fs-5">
                   <span className="card-text">
                     <strong>$ {matchedService?.price}</strong>{" "}
                     <span className="text-lighter">/ person</span>
@@ -79,15 +101,31 @@ const ReviewBooking = () => {
                     {matchedService?.duration}
                   </span>
                 </p>
+
+                <p className="d-block d-md-none card-text fs-6">
+                  <span className="card-text">
+                    <strong>$ {matchedService?.price}</strong>{" "}
+                    <span className="text-lighter">/ person</span>
+                  </span>{" "}
+                  <br />
+                  <span className="card-text">
+                    <i className="far fa-calendar-alt me-2 "> </i>
+                    {""}
+                    {matchedService?.duration}
+                  </span>
+                </p>
               </div>
             </div>
           </div>
 
           <div className="col">
-            <h5 className="text-center mx-auto pb-3 w-75 fw-bold">
+            <h5 className="d-none d-md-block text-center mx-auto pb-3 w-75 fw-bold">
               Fill up the form and submit to complete the booking.
             </h5>
-            <div className="container mx-auto">
+            <h5 className="pt-4 d-block d-md-none text-center mx-auto pb-3  fw-bold">
+              Fill up the form and submit to complete the booking.
+            </h5>
+            <div className="ms-3 mx-auto">
               <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="mb-3">
                   <p className="text-start">Name</p>

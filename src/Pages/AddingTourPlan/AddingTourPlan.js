@@ -24,16 +24,23 @@ const AddingTourPlan = () => {
 
   return (
     <div className="radius-card container mt-5 pt-1">
-      <h1 className="fw-bold text-center  mt-5 ">
-        Add New Tour Plan
-        <span className="gradient-txt"> .</span>
+      <h1 className="fw-bold d-none d-md-block text-center  mt-5 ">
+        Add A Tour
+        <span className="gradient-txt">.</span>
       </h1>
-      <p className="text-center w-50 mx-auto ">
+      <h1
+        style={{ fontSize: "2.5rem" }}
+        className="fw-bold d-block d-md-none text-center  mt-5 "
+      >
+        Add A Tour
+        <span className="gradient-txt">.</span>
+      </h1>
+      <p className="text-center w-75 mx-auto ">
         Add new tour plan by providing valid information.
       </p>
 
       <div className="mb-3 row row-cols-1 pb-5  row-cols-md-2 p-0   container mx-auto my-5  overflow-hidden">
-        <div className="container mx-auto w-50">
+        <div className="container mx-auto w-75">
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className="mb-3">
               <p className="text-start">Title</p>

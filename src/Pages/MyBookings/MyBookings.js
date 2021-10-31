@@ -16,11 +16,18 @@ const MyBookings = () => {
 
   return (
     <div className="radius-card container mt-5 pt-1 pb-5 px-5">
-      <h1 className="fw-bold text-center  mt-5 ">
+      <h1 className="fw-bold d-none d-md-block text-center  mt-5 ">
         Manage Your Booked Tour
-        <span className="gradient-txt"> .</span>
+        <span className="gradient-txt">.</span>
       </h1>
-      <p className="text-center w-50 mx-auto ">
+      <h1
+        style={{ fontSize: "2.3rem" }}
+        className="fw-bold d-block d-md-none text-center  mt-5 "
+      >
+        Manage Your Booked Tour
+        <span className="gradient-txt">.</span>
+      </h1>
+      <p className="text-center w-75 mx-auto ">
         Here you can know your total booked items, booking status and also can
         delete respective booking.
       </p>

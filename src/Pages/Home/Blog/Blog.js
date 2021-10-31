@@ -25,12 +25,6 @@ const Blog = ({ blogData }) => {
               {comments}
             </span>
           </div>
-
-          {/* <Link to={`/review/${_id}`}>
-            <button className="btn btn-primary gradient-btn rounded-3 px-3 rounded-3 fw-bold px-3 gradient-btn">
-              <i className="far fa-bookmark"></i> Book Now
-            </button>
-          </Link> */}
         </div>
       </div>
     </div>
