@@ -5,19 +5,19 @@ import useAuth from "../../../hooks/useAuth";
 
 //log in component
 const Login = () => {
-  //auth context
+  //auth context firebase
   const { firebaseContext } = useAuth();
   //destructuring
   const { googleSignIn, setError } = firebaseContext;
-  //location redirectUrl
+  //location redirectUri
   const location = useLocation();
   const history = useHistory();
-  const redirectUrl = location.state?.from || "/";
+  const redirectUri = location.state?.from || "/";
   //googleSignIn handle
   const handleGoogleLogin = () => {
     googleSignIn()
       .then(() => {
-        history.push(redirectUrl);
+        history.push(redirectUri);
       })
       .catch((error) => setError(error));
   };
@@ -34,10 +34,12 @@ const Login = () => {
         }}
         className="col col-md-7 container bg-white py-4"
       >
-        <h3 className="fw-bold fs-1 text-center ms-md-4 p-md-2 mx-auto my-5">
+        <h3 className="fw-bold fs-1 text-center ms-md-4 p-md-2 mx-auto mt-5">
           Login to your account.
         </h3>
-
+        <p className="mb-5">
+          Please login with your google account to stay connected with us !!
+        </p>
         <img
           style={{ cursor: "pointer" }}
           className="img-fluid"

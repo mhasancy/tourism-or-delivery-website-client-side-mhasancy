@@ -2,9 +2,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-//service component
+//Blog component
 const Blog = ({ blogData }) => {
-  //destructuring useAuth
   //destructuring props
   const { title, date, imgUrl, comments } = blogData;
   return (

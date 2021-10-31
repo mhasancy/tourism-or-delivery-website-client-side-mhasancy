@@ -1,7 +1,10 @@
+//imported file
 import React from "react";
 import { Link } from "react-router-dom";
 
+//team member component
 const TeamMember = ({ teamDataSingle }) => {
+  //destructuring props
   const { name, imgUrl, designation } = teamDataSingle;
   return (
     <div className="col container" style={{ width: "30rem" }}>

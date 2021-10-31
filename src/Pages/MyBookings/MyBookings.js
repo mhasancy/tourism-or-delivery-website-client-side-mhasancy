@@ -1,17 +1,19 @@
+//imported file
 import React from "react";
 import useAuth from "../../hooks/useAuth";
 import MyBooking from "../MyBooking/MyBooking";
 
+//myBookings component
 const MyBookings = () => {
+  //destructuring data from useAuth
   const { dataContext, firebaseContext } = useAuth();
   const { user } = firebaseContext;
-
   const { ordersData } = dataContext;
+  //filtering my orders data
   const myOrderedItems = ordersData?.filter(
     (myOrderedItem) => myOrderedItem.email === user.email
   );
-  // const number = myOrderedItems.map((e, i) => i);
-  // console.log(number);
+
   return (
     <div className="shadow radius-card container mt-5 pt-1 pb-5 px-5">
       <h1 className="fw-bold text-center  mt-5 ">
@@ -22,12 +24,13 @@ const MyBookings = () => {
         Here you can know your total booked items, booking status and also can
         delete respective booking.
       </p>
-
-      <h2>{myOrderedItems?.length}</h2>
+      <p className="fs-4">
+        {" "}
+        <strong>Total Bookings</strong>: {myOrderedItems?.length}
+      </p>
       <table className="table table-bordered">
         <thead>
           <tr>
-            <th scope="col">#</th>
             <th scope="col">Picture</th>
             <th scope="col">Tour Name</th>
             <th scope="col">Address</th>

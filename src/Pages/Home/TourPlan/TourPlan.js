@@ -2,9 +2,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-//service component
+//TourPlan component
 const TourPlan = ({ serviceData }) => {
-  //destructuring useAuth
   //destructuring props
   const { _id, title, intro, imgUrl } = serviceData;
   return (
@@ -23,7 +22,10 @@ const TourPlan = ({ serviceData }) => {
           style={{ backgroundColor: "rgba(0,0,0,0.4)", paddingTop: "100px" }}
           className="card-body"
         >
-          <h3 style={{ color: "#f8f9fa" }} className="card-title">
+          <h3
+            style={{ color: "#f8f9fa", height: "100px" }}
+            className="card-title"
+          >
             {title}
           </h3>
           <p style={{ height: "100px" }} className="card-text text-white">

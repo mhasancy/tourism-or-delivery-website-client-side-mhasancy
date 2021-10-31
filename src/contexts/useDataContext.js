@@ -1,6 +1,10 @@
+//imported file
 import axios from "axios";
 import { useEffect, useState } from "react";
+
+//data context for CRUD operations
 const useDataContext = () => {
+  //data state for CRUD operations
   const [servicesData, setServicesData] = useState([]);
   const [teamData, setTeamData] = useState([]);
   const [blogsData, setBlogsData] = useState([]);
@@ -8,9 +12,9 @@ const useDataContext = () => {
   const [error, setError] = useState("");
   const [orderStatus, setOrderStatus] = useState("Pending");
 
-  //delete user order
-  const deleteOrder = (_id) => {
-    const confirmation = window.confirm("Are you sure you want to delete");
+  //delete users booking
+  const deleteBooking = (_id) => {
+    const confirmation = window.confirm("Are you sure you want to delete?");
     if (confirmation) {
       axios
         .delete(`https://morning-headland-33289.herokuapp.com/orders/${_id}`)
@@ -20,12 +24,13 @@ const useDataContext = () => {
               (order) => order?._id === _id
             );
             setOrdersData(remainingOrders);
-            alert("order deleted");
+            alert("Booking deleted successfully.");
           }
         })
         .catch((error) => setError(error));
     }
   };
+  //handle status change to approved
   const handleStatusUpdate = (_id) => {
     axios
       .put(`https://morning-headland-33289.herokuapp.com/orders/${_id}`, {
@@ -46,13 +51,16 @@ const useDataContext = () => {
       .then((response) => setServicesData(response?.data))
       .catch((error) => setError(error));
   }, [servicesData]);
-  //service data load
+
+  //team data load
   useEffect(() => {
     axios
       .get("https://morning-headland-33289.herokuapp.com/team")
       .then((response) => setTeamData(response?.data))
       .catch((error) => setError(error));
   }, []);
+
+  //blogs data load
   useEffect(() => {
     axios
       .get("https://morning-headland-33289.herokuapp.com/blogs")
@@ -60,7 +68,7 @@ const useDataContext = () => {
       .catch((error) => setError(error));
   }, []);
 
-  //individual orders data load
+  //individual order data load
   useEffect(() => {
     axios
       .get("https://morning-headland-33289.herokuapp.com/orders")
@@ -73,7 +81,7 @@ const useDataContext = () => {
     ordersData,
     teamData,
     blogsData,
-    deleteOrder,
+    deleteBooking,
     handleStatusUpdate,
     orderStatus,
     error,

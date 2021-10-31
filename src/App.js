@@ -38,11 +38,9 @@ function App() {
             <PrivateRoute exact path="/adding-tour-plan">
               <AddingTourPlan></AddingTourPlan>
             </PrivateRoute>
-
             <Route exact path="/login">
               <Login></Login>
             </Route>
-
             <Route path="*">
               <NotFound></NotFound>
             </Route>

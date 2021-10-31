@@ -1,8 +1,11 @@
+//imported file
 import React from "react";
 import useAuth from "../../../hooks/useAuth";
 import TeamMember from "../TeamMember/TeamMember";
 
+//team members component
 const Team = () => {
+  //destructuring data
   const { dataContext } = useAuth();
   const { teamData } = dataContext;
   return (

@@ -3,9 +3,9 @@ import React from "react";
 import useAuth from "../../../hooks/useAuth";
 import Blog from "../Blog/Blog";
 
-//services component
+//Blogs component
 const Blogs = () => {
-  //services data set
+  //destructuring Blogs data
   const { dataContext } = useAuth();
   const { blogsData } = dataContext;
   return (

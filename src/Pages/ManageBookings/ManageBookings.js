@@ -1,8 +1,11 @@
+//imported file
 import React from "react";
 import useAuth from "../../hooks/useAuth";
 import ManageBooking from "../ManageBooking/ManageBooking";
 
+//managing bookings component
 const ManageBookings = () => {
+  //destructuring
   const { dataContext } = useAuth();
   const { ordersData } = dataContext;
   return (
@@ -15,16 +18,16 @@ const ManageBookings = () => {
         Here you can know total booked items,update booking status and also can
         delete a respective booking.
       </p>
-
-      <h2>{ordersData?.length}</h2>
+      <p className="fs-4">
+        {" "}
+        <strong>Total Bookings</strong>: {ordersData?.length}
+      </p>
       <table className="table table-bordered">
         <thead>
           <tr>
-            <th scope="col">#</th>
             <th scope="col">Picture</th>
             <th scope="col">Tour Name</th>
-            <th scope="col">Address</th>
-            <th scope="col">Mobile No.</th>
+            <th scope="col">User's Info</th>
             <th scope="col">Status</th>
             <th scope="col">Action</th>
           </tr>

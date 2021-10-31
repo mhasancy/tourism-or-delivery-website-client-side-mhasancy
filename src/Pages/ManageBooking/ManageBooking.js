@@ -1,24 +1,32 @@
+//imported file
 import React from "react";
 import useAuth from "../../hooks/useAuth";
 
+//managing single booking component
 const ManageBooking = ({ orderData }) => {
+  //destructuring
   const { dataContext } = useAuth();
-  const { deleteOrder, handleStatusUpdate } = dataContext;
-  const { serviceTitle, status, _id, address, cell, imgUrl } = orderData;
+  const { deleteBooking, handleStatusUpdate } = dataContext;
+  const { serviceTitle, name, email, status, _id, address, cell, imgUrl } =
+    orderData;
   return (
     <tr>
-      <th scope="row"></th>
       <td>
         <img style={{ width: "110px", height: "80px" }} src={imgUrl} alt="" />
       </td>
       <td>{serviceTitle}</td>
-      <td> {address}</td>
-      <td>{cell}</td>
+      <td className="text-start ps-4">
+        <strong>Name</strong>: {name} <br />
+        <strong>Email</strong>: {email} <br />
+        <strong>Cell</strong>: {cell}
+        <br />
+        <strong>Address</strong>: {address}
+      </td>
       <td>{status}</td>
       <td>
         <button
           className="btn btn-primary gradient-btn"
-          onClick={() => deleteOrder(_id)}
+          onClick={() => deleteBooking(_id)}
         >
           Delete
         </button>{" "}

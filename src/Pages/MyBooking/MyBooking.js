@@ -1,18 +1,16 @@
+//imported file
 import React from "react";
 import useAuth from "../../hooks/useAuth";
 
+// my booking component
 const MyBooking = ({ myOrderedItem }) => {
+  //destructuring useAuth
   const { dataContext } = useAuth();
-  const { deleteOrder } = dataContext;
+  const { deleteBooking } = dataContext;
   const { _id, serviceTitle, status, imgUrl, address, cell } = myOrderedItem;
 
   return (
     <tr>
-      <th scope="row">
-        {/* {[...Array(10)].map((e, i) => {
-          return <li key={i}>{i}</li>;
-        })} */}
-      </th>
       <td>
         <img style={{ width: "110px", height: "80px" }} src={imgUrl} alt="" />
       </td>
@@ -23,7 +21,7 @@ const MyBooking = ({ myOrderedItem }) => {
       <td>
         <button
           className="btn btn-primary gradient-btn"
-          onClick={() => deleteOrder(_id)}
+          onClick={() => deleteBooking(_id)}
         >
           Delete
         </button>

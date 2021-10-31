@@ -3,9 +3,9 @@ import React from "react";
 import useAuth from "../../../hooks/useAuth";
 import TourPlan from "../TourPlan/TourPlan";
 
-//services component
+//TourPlans component
 const TourPlans = () => {
-  //services data set
+  //destructuring data set
   const { dataContext } = useAuth();
   const { servicesData } = dataContext;
   return (

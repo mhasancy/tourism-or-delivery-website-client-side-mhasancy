@@ -2,7 +2,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import useAuth from "../../../hooks/useAuth";
-//navbar component
+
+//header component
 const Header = () => {
   const { firebaseContext } = useAuth();
   //destructuring
@@ -37,7 +38,6 @@ const Header = () => {
                 Review Booking
               </NavLink>
             </li>
-
             {user?.email ? (
               <>
                 {" "}

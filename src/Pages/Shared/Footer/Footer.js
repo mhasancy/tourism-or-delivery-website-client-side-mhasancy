@@ -36,7 +36,6 @@ const Footer = () => {
             </a>
           </div>
         </div>
-        {/* address */}
         <div className="col col-md-4">
           <h2 className="fw-bold fs-2 text-start ms-3 ps-4">Contact</h2>
           <br />

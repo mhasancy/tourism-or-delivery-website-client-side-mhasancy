@@ -1,15 +1,19 @@
+//imported file
 import axios from "axios";
 import React from "react";
 import { useForm } from "react-hook-form";
 
+//adding tour services component
 const AddingTourPlan = () => {
+  //destructuring use_form
   const { register, reset, handleSubmit } = useForm();
+  //posting form data to server
   const onSubmit = (data) => {
     axios
       ?.post("https://morning-headland-33289.herokuapp.com/services", data)
       .then((response) => {
         if (response?.data.insertedId) {
-          alert("data added");
+          alert("Tour plan added successfully.");
           reset();
         }
       })
