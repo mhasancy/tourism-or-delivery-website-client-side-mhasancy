@@ -5,6 +5,7 @@ const useDataContext = () => {
   const [teamData, setTeamData] = useState([]);
   const [blogsData, setBlogsData] = useState([]);
   const [ordersData, setOrdersData] = useState([]);
+  const [error, setError] = useState("");
   const [orderStatus, setOrderStatus] = useState("Pending");
 
   //delete user order
@@ -21,7 +22,8 @@ const useDataContext = () => {
             setOrdersData(remainingOrders);
             alert("order deleted");
           }
-        });
+        })
+        .catch((error) => setError(error));
     }
   };
   const handleStatusUpdate = (_id) => {
@@ -33,32 +35,37 @@ const useDataContext = () => {
         if (response.data.modifiedCount > 0) {
           setOrderStatus("Aprroved");
         }
-      });
+      })
+      .catch((error) => setError(error));
   };
 
   //service data load
   useEffect(() => {
     axios
       .get("https://morning-headland-33289.herokuapp.com/services")
-      .then((response) => setServicesData(response?.data));
+      .then((response) => setServicesData(response?.data))
+      .catch((error) => setError(error));
   }, [servicesData]);
   //service data load
   useEffect(() => {
     axios
       .get("https://morning-headland-33289.herokuapp.com/team")
-      .then((response) => setTeamData(response?.data));
+      .then((response) => setTeamData(response?.data))
+      .catch((error) => setError(error));
   }, []);
   useEffect(() => {
     axios
       .get("https://morning-headland-33289.herokuapp.com/blogs")
-      .then((response) => setBlogsData(response?.data));
+      .then((response) => setBlogsData(response?.data))
+      .catch((error) => setError(error));
   }, []);
 
   //individual orders data load
   useEffect(() => {
     axios
       .get("https://morning-headland-33289.herokuapp.com/orders")
-      .then((response) => setOrdersData(response?.data));
+      .then((response) => setOrdersData(response?.data))
+      .catch((error) => setError(error));
   }, [ordersData, orderStatus]);
 
   return {
@@ -69,6 +76,7 @@ const useDataContext = () => {
     deleteOrder,
     handleStatusUpdate,
     orderStatus,
+    error,
   };
 };
 

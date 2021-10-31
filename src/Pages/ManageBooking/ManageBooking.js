@@ -9,7 +9,7 @@ const ManageBooking = ({ orderData }) => {
     <tr>
       <th scope="row"></th>
       <td>
-        <img style={{ width: "100px" }} src={imgUrl} alt="" />
+        <img style={{ width: "110px", height: "80px" }} src={imgUrl} alt="" />
       </td>
       <td>{serviceTitle}</td>
       <td> {address}</td>

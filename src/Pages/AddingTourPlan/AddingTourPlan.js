@@ -11,9 +11,10 @@ const AddingTourPlan = () => {
         if (response?.data.insertedId) {
           alert("data added");
           reset();
-        } else {
-          alert("data not added, please try again");
         }
+      })
+      .catch((error) => {
+        alert(error);
       });
   };
 

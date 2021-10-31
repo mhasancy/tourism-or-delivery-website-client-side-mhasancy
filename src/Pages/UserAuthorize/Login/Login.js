@@ -8,16 +8,18 @@ const Login = () => {
   //auth context
   const { firebaseContext } = useAuth();
   //destructuring
-  const { googleSignIn } = firebaseContext;
+  const { googleSignIn, setError } = firebaseContext;
   //location redirectUrl
   const location = useLocation();
   const history = useHistory();
   const redirectUrl = location.state?.from || "/";
   //googleSignIn handle
   const handleGoogleLogin = () => {
-    googleSignIn().then(() => {
-      history.push(redirectUrl);
-    });
+    googleSignIn()
+      .then(() => {
+        history.push(redirectUrl);
+      })
+      .catch((error) => setError(error));
   };
 
   return (

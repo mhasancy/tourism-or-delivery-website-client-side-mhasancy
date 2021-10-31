@@ -31,11 +31,13 @@ const ReviewBooking = () => {
         if (response?.data.acknowledged) {
           alert("data added");
           reset();
-        } else {
-          alert("data not added, please try again");
         }
+      })
+      .catch((error) => {
+        alert(error);
       });
   };
+
   //dynamic route data load hook
   //adding matchedService data
 
