@@ -23,7 +23,7 @@ const Login = () => {
   };
 
   return (
-    <div className="row row-cols-1  h-100 row-cols-md-2 p-0 shadow container mx-auto my-5 radius-card overflow-hidden">
+    <div className="row row-cols-1  h-100 row-cols-md-2 p-0 container mx-auto my-5 radius-card overflow-hidden">
       <div
         style={{
           background: `url("https://wanderers.qodeinteractive.com/wp-content/uploads/2018/02/h1-background-1.png?id=125")`,

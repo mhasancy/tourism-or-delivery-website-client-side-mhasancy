@@ -32,7 +32,7 @@ const ReviewBooking = () => {
       })
       .then((response) => {
         if (response?.data.acknowledged) {
-          alert("data added");
+          alert("Tour booked successfully.");
           reset();
         }
       })
@@ -42,12 +42,7 @@ const ReviewBooking = () => {
   };
 
   return (
-    <div
-      style={{
-        background: `url("https://i.imgur.com/DTS7nNR.jpeg")`,
-      }}
-      className="container shadow radius-card py-1 my-5 py-5"
-    >
+    <div className="container radius-card mt-5 pt-1 pb-5 px-5">
       <h1 className="fw-bold text-center  mt-5 ">
         Book Your Tour
         <span className="gradient-txt">.</span>
@@ -59,7 +54,7 @@ const ReviewBooking = () => {
       {matchedService ? (
         <div className="row row-cols-1 row-cols-md-2 mx-auto ">
           <div className="col">
-            <div class="card">
+            <div class="card border-card">
               <img
                 style={{ height: "25rem" }}
                 src={matchedService?.imgUrl}
@@ -89,7 +84,7 @@ const ReviewBooking = () => {
                     defaultValue={user?.displayName}
                     {...register("name", { required: true, maxLength: 20 })}
                     type="text"
-                    className="form-control"
+                    className="form-control border-card"
                   />
                 </div>
                 <div className="mb-3">
@@ -98,7 +93,7 @@ const ReviewBooking = () => {
                     defaultValue={user?.email}
                     {...register("email", { required: true })}
                     type="email"
-                    className="form-control"
+                    className="form-control border-card"
                   />
                 </div>
                 <div className="mb-3">
@@ -106,7 +101,7 @@ const ReviewBooking = () => {
                   <input
                     {...register("cell", { required: true })}
                     type="telephone"
-                    className="form-control"
+                    className="form-control border-card"
                   />
                 </div>
                 <div className="mb-3">
@@ -114,7 +109,7 @@ const ReviewBooking = () => {
                   <textarea
                     {...register("address", { required: true })}
                     type="text"
-                    className="form-control"
+                    className="form-control border-card"
                   />
                 </div>
                 <button type="submit" className="btn btn-primary gradient-btn">

@@ -23,7 +23,7 @@ const AddingTourPlan = () => {
   };
 
   return (
-    <div className="shadow radius-card container mt-5 pt-1">
+    <div className="radius-card container mt-5 pt-1">
       <h1 className="fw-bold text-center  mt-5 ">
         Add New Tour Plan
         <span className="gradient-txt"> .</span>
@@ -40,7 +40,7 @@ const AddingTourPlan = () => {
               <input
                 {...register("title", { required: true })}
                 type="text"
-                className="form-control"
+                className="form-control border-card"
               />
             </div>
 
@@ -49,7 +49,7 @@ const AddingTourPlan = () => {
               <textarea
                 {...register("intro", { required: true })}
                 type="text"
-                className="form-control"
+                className="form-control border-card"
               />
             </div>
 
@@ -58,7 +58,7 @@ const AddingTourPlan = () => {
               <input
                 {...register("imgUrl", { required: true })}
                 type="url"
-                className="form-control"
+                className="form-control border-card"
               />
             </div>
             <div className="mb-3">
@@ -66,7 +66,7 @@ const AddingTourPlan = () => {
               <input
                 {...register("price", { required: true })}
                 type="number"
-                className="form-control"
+                className="form-control border-card"
               />
             </div>
 

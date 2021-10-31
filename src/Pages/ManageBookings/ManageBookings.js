@@ -9,7 +9,7 @@ const ManageBookings = () => {
   const { dataContext } = useAuth();
   const { ordersData } = dataContext;
   return (
-    <div className="shadow radius-card container mt-5 pt-1 pb-5 px-5">
+    <div className="radius-card container mt-5 pt-1 pb-5 px-5">
       <h1 className="fw-bold text-center  mt-5 ">
         Manage All Bookings
         <span className="gradient-txt"> .</span>
@@ -23,7 +23,7 @@ const ManageBookings = () => {
         <strong>Total Bookings</strong>: {ordersData?.length}
       </p>
       <div className="table-responsive-md">
-        <table className="table table-bordered">
+        <table className="table table-bordered border-card">
           <thead>
             <tr>
               <th scope="col">Name & Picture</th>

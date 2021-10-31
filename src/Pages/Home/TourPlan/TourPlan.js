@@ -23,7 +23,7 @@ const TourPlan = ({ serviceData }) => {
         >
           <h3
             style={{ color: "#f8f9fa", height: "100px" }}
-            className="card-title"
+            className="card-title mb-4"
           >
             {title}
           </h3>
