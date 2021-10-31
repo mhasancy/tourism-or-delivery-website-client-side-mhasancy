@@ -21,10 +21,10 @@ const TourPlans = () => {
       </p>
       {servicesData?.length <= 0 ? (
         <div className="text-center">
-          <div className="spinner-border border-card" role="status"></div>
+          <div className="spinner-border" role="status"></div>
         </div>
       ) : (
-        <div className="row row-cols-1 row-cols-md-3 g-4 container mx-auto">
+        <div className="row row-cols-1 row-cols-md-3 g-4 container-fluid mx-auto ">
           {servicesData?.map((serviceData) => (
             <TourPlan
               key={serviceData?._id}

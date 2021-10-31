@@ -29,6 +29,8 @@ const ReviewBooking = () => {
         serviceId: serviceId,
         status: "Pending",
         imgUrl: matchedService?.imgUrl,
+        duration: matchedService?.duration,
+        price: matchedService?.price,
       })
       .then((response) => {
         if (response?.data.acknowledged) {
@@ -54,19 +56,28 @@ const ReviewBooking = () => {
       {matchedService ? (
         <div className="row row-cols-1 row-cols-md-2 mx-auto ">
           <div className="col">
-            <div class="card border-card">
+            <div className="card border-card">
               <img
                 style={{ height: "25rem" }}
                 src={matchedService?.imgUrl}
-                class="card-img-top img-fluid"
+                className="card-img-top img-fluid"
                 alt=""
               />
-              <div class="card-body">
-                <h4 class="card-title fw-bold">{matchedService?.title}</h4>
-                <p class="card-text fs-5 fw-light">{matchedService?.intro}.</p>
-                <p class="card-text fs-3">
-                  {" "}
-                  Booking Price: <strong>$ {matchedService?.price}</strong>
+              <div className="card-body">
+                <h4 className="card-title fw-bold">{matchedService?.title}</h4>
+                <p className="card-text fs-5 fw-light px-4">
+                  {matchedService?.intro}.
+                </p>
+                <p className="card-text fs-5">
+                  <span className="card-text">
+                    <strong>$ {matchedService?.price}</strong>{" "}
+                    <span className="text-lighter">/ person</span>
+                  </span>
+                  <span className="card-text">
+                    <i className="far fa-calendar-alt me-2 ms-5"> </i>
+                    {""}
+                    {matchedService?.duration}
+                  </span>
                 </p>
               </div>
             </div>

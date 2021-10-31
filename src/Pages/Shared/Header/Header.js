@@ -48,12 +48,12 @@ const Header = () => {
                 </li>
                 <li className="nav-item">
                   <NavLink className="nav-link" to="/adding-tour-plan">
-                    Adding Tour Plan
+                    Add Tour
                   </NavLink>
                 </li>
                 <li className="nav-item">
                   <NavLink className="nav-link" to="/manage-bookings">
-                    Manage All Bookings
+                    All Bookings
                   </NavLink>
                 </li>
                 <li className="nav-item">

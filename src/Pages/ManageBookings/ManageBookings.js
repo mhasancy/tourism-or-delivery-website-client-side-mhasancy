@@ -26,7 +26,7 @@ const ManageBookings = () => {
         <table className="table table-bordered border-card">
           <thead>
             <tr>
-              <th scope="col">Name & Picture</th>
+              <th scope="col">Tour Info</th>
               <th scope="col">Booking Info</th>
               <th scope="col">Status</th>
               <th scope="col">Action</th>

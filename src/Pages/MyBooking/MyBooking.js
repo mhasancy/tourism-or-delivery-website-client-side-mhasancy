@@ -7,16 +7,36 @@ const MyBooking = ({ myOrderedItem }) => {
   //destructuring useAuth
   const { dataContext } = useAuth();
   const { deleteBooking } = dataContext;
-  const { _id, serviceTitle, status, name, email, imgUrl, address, cell } =
-    myOrderedItem;
+  const {
+    _id,
+    serviceTitle,
+    status,
+    name,
+    email,
+    address,
+    cell,
+    duration,
+    price,
+  } = myOrderedItem;
 
   return (
     <tr>
       <td>
-        <h5 className="mx-auto text-center">
+        <h5 className="mx-auto text-center pb-2">
           <strong>{serviceTitle}</strong>
         </h5>
-        <img style={{ width: "110px", height: "80px" }} src={imgUrl} alt="" />
+        <p>
+          <small className="card-text fs-6">
+            <strong>$ {price}</strong>{" "}
+            <span className="text-lighter">/ person</span>
+          </small>{" "}
+          <br />
+          <small className="card-text">
+            <i className="far fa-calendar-alt me-2 ms-3"> </i>
+            {""}
+            {duration}
+          </small>
+        </p>
       </td>
       <td className="text-start ps-4">
         <strong>Name</strong>: {name} <br />
