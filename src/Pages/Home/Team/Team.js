@@ -17,7 +17,7 @@ const Team = () => {
         </h1>
 
         <h1
-          style={{ fontSize: "3rem" }}
+          style={{ fontSize: "2.5rem" }}
           className="d-block d-md-none fw-bold text-center ms-md-4 p-md-2  mt-5 mb-3"
         >
           Our Team
