@@ -8,10 +8,7 @@ const TeamMember = ({ teamDataSingle }) => {
   const { name, imgUrl, designation } = teamDataSingle;
   return (
     <div className="col container" style={{ width: "30rem" }}>
-      <div
-        className="card border-card h-100 radius-card overflow-hidden"
-        id="hover-card"
-      >
+      <div className="card border-card h-100 radius-card overflow-hidden">
         <div className="row g-0">
           <div className="col-5">
             <img

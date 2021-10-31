@@ -16,7 +16,6 @@ const TourPlan = ({ serviceData }) => {
           height: "25rem",
         }}
         className="card border-card radius-card overflow-hidden"
-        id="hover-card"
       >
         <div
           style={{ backgroundColor: "rgba(0,0,0,0.4)", paddingTop: "100px" }}

@@ -12,9 +12,11 @@ const ManageBooking = ({ orderData }) => {
   return (
     <tr>
       <td>
+        <h5 className="mx-auto text-center">
+          <strong>{serviceTitle}</strong>
+        </h5>
         <img style={{ width: "110px", height: "80px" }} src={imgUrl} alt="" />
       </td>
-      <td>{serviceTitle}</td>
       <td className="text-start ps-4">
         <strong>Name</strong>: {name} <br />
         <strong>Email</strong>: {email} <br />

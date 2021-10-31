@@ -22,22 +22,23 @@ const ManageBookings = () => {
         {" "}
         <strong>Total Bookings</strong>: {ordersData?.length}
       </p>
-      <table className="table table-bordered">
-        <thead>
-          <tr>
-            <th scope="col">Picture</th>
-            <th scope="col">Tour Name</th>
-            <th scope="col">User's Info</th>
-            <th scope="col">Status</th>
-            <th scope="col">Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          {ordersData?.map((orderData) => (
-            <ManageBooking orderData={orderData} key={orderData._id} />
-          ))}
-        </tbody>
-      </table>
+      <div className="table-responsive-md">
+        <table className="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">Name & Picture</th>
+              <th scope="col">Booking Info</th>
+              <th scope="col">Status</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            {ordersData?.map((orderData) => (
+              <ManageBooking orderData={orderData} key={orderData._id} />
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };

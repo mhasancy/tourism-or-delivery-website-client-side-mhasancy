@@ -28,26 +28,26 @@ const MyBookings = () => {
         {" "}
         <strong>Total Bookings</strong>: {myOrderedItems?.length}
       </p>
-      <table className="table table-bordered">
-        <thead>
-          <tr>
-            <th scope="col">Picture</th>
-            <th scope="col">Tour Name</th>
-            <th scope="col">Address</th>
-            <th scope="col">Mobile No.</th>
-            <th scope="col">Status</th>
-            <th scope="col">Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          {myOrderedItems?.map((myOrderedItem) => (
-            <MyBooking
-              myOrderedItem={myOrderedItem}
-              key={myOrderedItem?._id}
-            ></MyBooking>
-          ))}
-        </tbody>
-      </table>
+      <div className="table-responsive-md">
+        <table className="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">Name & Picture</th>
+              <th scope="col">Booking Info</th>
+              <th scope="col">Status</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            {myOrderedItems?.map((myOrderedItem) => (
+              <MyBooking
+                myOrderedItem={myOrderedItem}
+                key={myOrderedItem?._id}
+              ></MyBooking>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };

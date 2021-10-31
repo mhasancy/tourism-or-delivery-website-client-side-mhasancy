@@ -1,5 +1,8 @@
+/* font import */
 @import url("https://fonts.googleapis.com/css2?family=Kristi&family=Montserrat:wght@100;200;300;400;600;700&family=Playfair+Display:wght@400;800&display=swap");
-
+/* ------------------
+        global 
+---------------------*/
 body {
   background: url("https://i.imgur.com/DTS7nNR.jpeg");
   margin: 0;
@@ -35,16 +38,6 @@ h4 {
 h5 {
   font-family: Playfair Display, sans-serif;
   font-size: 25px;
-}
-.nav-item:hover {
-  background: rgba(255, 205, 5, 0.829);
-  background: linear-gradient(
-    90deg,
-    rgba(255, 205, 5, 0.637) 0%,
-    rgba(255, 205, 5, 0.63) 100%
-  );
-  border: none;
-  border-radius: 5px;
 }
 /* gradient background */
 .gradient-bg {
@@ -86,14 +79,26 @@ h5 {
 .border-card {
   border: 1px solid rgba(128, 128, 128, 0.123);
 }
-/* card hover */
-#hover-card:hover {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  transition: opacity 0.3s ease-in-out;
+
+/* ------------------
+        header 
+---------------------*/
+/* navbar item */
+.nav-item:hover {
+  background: rgba(255, 205, 5, 0.829);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 205, 5, 0.637) 0%,
+    rgba(255, 205, 5, 0.63) 100%
+  );
+  border: none;
+  border-radius: 5px;
 }
-/* --------------------
-          header
------------------------ */
+
+/* ------------------
+        intro
+---------------------*/
+
 /* banner background */
 .hero-bg {
   background: url("https://wanderers.qodeinteractive.com/wp-content/uploads/2018/03/coming-soon-background-img.jpg");
@@ -117,10 +122,4 @@ h5 {
   background-size: cover;
   background-position: center;
   width: 100vw;
-}
-.zind {
-  z-index: -55;
-}
-.lind {
-  z-index: 55;
 }

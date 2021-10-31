@@ -8,10 +8,7 @@ const Blog = ({ blogData }) => {
   const { title, date, imgUrl, comments } = blogData;
   return (
     <div className="col container" style={{ width: "20rem" }}>
-      <div
-        className="card border-card h-100 radius-card overflow-hidden"
-        id="hover-card"
-      >
+      <div className="card border-card h-100 radius-card overflow-hidden">
         <img src={imgUrl} className="card-img-top" alt="" />
         <div className="card-body">
           <Link to="/" className="text-decoration-none">
