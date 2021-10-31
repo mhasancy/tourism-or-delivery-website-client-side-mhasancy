@@ -33,10 +33,18 @@ const ManageBookings = () => {
         <table className="table table-bordered border-card">
           <thead>
             <tr>
-              <th scope="col">Tour Info</th>
-              <th scope="col">Booking Info</th>
-              <th scope="col">Status</th>
-              <th scope="col">Action</th>
+              <th style={{ width: "200px" }} scope="col align-middle">
+                Tour Info
+              </th>
+              <th style={{ width: "650px" }} scope="col align-middle">
+                Booking Info
+              </th>
+              <th style={{ width: "130px" }} scope="col align-middle">
+                Status
+              </th>
+              <th style={{ width: "150px" }} scope="col align-middle">
+                Action
+              </th>
             </tr>
           </thead>
           <tbody>

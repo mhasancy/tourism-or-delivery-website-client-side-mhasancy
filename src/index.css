@@ -39,6 +39,10 @@ h5 {
   font-family: Playfair Display, sans-serif;
   font-size: 25px;
 }
+h6 {
+  font-family: Playfair Display, sans-serif;
+  font-size: 20px;
+}
 /* gradient background */
 .gradient-bg {
   background: rgb(255, 204, 5);
@@ -121,5 +125,5 @@ h5 {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  width: 100vw;
+  width: "100vw";
 }

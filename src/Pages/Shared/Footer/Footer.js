@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 //footer component
 const Footer = () => {
   return (
-    <div className="container-fluid img-fluid footer-bg row row-cols-1 g-4 btn-yellow  mt-5 text-light py-5 text-start">
+    <div className="container-fluid img-fluid mx-0 footer-bg row row-cols-1 g-4 btn-yellow  mt-5 text-light py-5 text-start">
       <div className="row">
         {/* short about */}
         <div className="col col-md-5">
@@ -95,6 +95,12 @@ const Footer = () => {
             </li>
           </ul>
         </div>
+      </div>
+      <hr className="border-card" />
+      <div>
+        <p className="text-center mb-0">
+          © 2021 Travel Now. Component copyrights belongs to their authors.
+        </p>
       </div>
     </div>
   );
